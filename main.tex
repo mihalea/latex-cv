@@ -1,0 +1,129 @@
+\documentclass[12pt,letterpaper]{article}
+
+\def\myauthor{Paul Gessler}
+\def\mytitle{pdg-vita}
+\def\myemail{pdgessler@gmail.com}
+\def\myweb{pdgessler}
+\def\myphone{414-241-1627}
+\def\mykeywords{
+  paul gessler,
+  resume,
+  curriculum,
+  vita,
+  curriculum vita,
+  cv,
+  paul,
+  gessler,
+  pdg
+}
+
+\setlength\parindent{0pt}
+
+\newenvironment{itemize*}%
+{\begin{itemize}%
+  \setlength{\itemsep}{0pt}}%
+{\end{itemize}}
+
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+%\usepackage{ocgtools}
+\usepackage{enumitem}
+\setlist{nolistsep,leftmargin=0.15in}
+\usepackage[log-declarations=false]{xparse}
+\usepackage[no-math]{fontspec}
+\usepackage{microtype}
+\usepackage[margin=1.125in,top=1.375in,right=1in,left=2in]{geometry}
+\usepackage[strict]{changepage}
+\usepackage[
+  ocgcolorlinks,
+  urlcolor={[rgb]{0,0,0.54}},
+  unicode,
+  plainpages=false,
+  pdfpagelabels,
+  pdftitle={\mytitle},
+  pdfauthor={\myauthor},
+  pdfkeywords={\mykeywords}
+]{hyperref}
+
+
+\newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
+\newcommand{\rdate}[1]{{\addfontfeature{Numbers=OldStyle} \hfill #1}}
+\renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
+\renewcommand{\labelitemi}{-}
+
+\setmainfont[
+  Ligatures={TeX,Common},
+  BoldFont={AGaramondPro-Semibold},
+]{Adobe Garamond Pro}
+\setsansfont[
+  Ligatures={TeX,Common},
+  Letters=SmallCaps,
+  Color=660000,
+]{Adobe Garamond Pro}
+\setmonofont[Scale=0.85]{FontAwesome}
+
+\begin{document}\flushbottom
+\pagestyle{fancy} \setlength\headwidth{6.5in}
+\rhead{\textsc{paul d.~gessler—r\'{e}sum\'{e}—\thepage{} of \pageref*{LastPage}}} \cfoot{}
+\thispagestyle{empty}
+\begin{adjustwidth}{-1in}{}
+{\Huge
+  {\textsc{%
+    {\addfontfeature{Style=TitlingCaps}P}\kern-1.5ptaul
+    {\addfontfeature{Style=TitlingCaps}D}\kern-2pt.~%
+    {\addfontfeature{Style=TitlingCaps}G}essler}
+  }
+}
+\hfill\hfill\hfill
+{
+  \begin{minipage}[b]{2in}
+    \flushleft \footnotesize
+    4088 West Hawthorne Trace Road \\
+    Apartment 202 \\
+    Brown Deer, WI~~53209-1017
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{1.2in}
+    \flushright \footnotesize
+    \href{tel:\myphone}{\myphone} \\ %\texttt{}~
+    \href{mailto:\myemail}{\myemail} \\
+    \href{https://www.github.com/\myweb}{\texttt{}}~\href{https://www.linkedin.com/in/\myweb}{\texttt{}~\myweb}
+  \end{minipage}
+}\par
+\hrulefill
+\end{adjustwidth}
+\reversemarginpar
+\setlength\marginparwidth{0.85in}
+\smallskip
+\mhead{Education}%
+\textbf{Marquette University,} Milwaukee, Wisconsin \newline
+\emph{Master of Science, \href{http://www.marquette.edu/engineering/mechanical/}{Mechanical Engineering}} \rdate{2012–2014}
+\begin{itemize*}
+  \item Cumulative GPA: 3.44/4.00; {Energy Systems Specialization}
+  \item Thesis: \href{https://dl.dropboxusercontent.com/u/10724484/resume/pdg_thesis.pdf}{One-Dimensional Model of a Refrigeration Cycle Compressor Test Block}
+  \item Advisor: Dr.~Margaret M.~Mathison
+\end{itemize*}
+
+\medskip
+\textbf{Milwaukee School of Engineering,} Milwaukee, Wisconsin \newline
+\emph{Bachelor of Science, \href{http://www.msoe.edu/community/academics/mechanical-engineering-department/mechanical-engineering}{Mechanical Engineering}} \rdate{2008–2012}
+\begin{itemize*}
+  \item Cumulative GPA: 3.56/4.00; \href{http://www.msoe.edu/community/academics/minors/page/1448/mathematics-minor}{Mathematics Minor}
+  \item Senior Project: \href{https://dl.dropbox.com/u/10724484/resume/ME492_2012_Design_Report_PulseWaterJet.pdf}{Modeling of Pulsed Jet Impingement on Brittle Materials}
+  \item Advisors: Prof.~Thomas J.~Labus and Dr.~Vincent C.~Prantil
+\end{itemize*}
+
+\bigskip
+\mhead{Activities \& \newline Interests}%
+Varsity Crew (\date{2008–2010}),
+Cycling,
+Running,
+Backpacking,
+Canoeing,
+%Woodworking,
+Photography,
+Graphic/Web Design,
+Computer System Administration,
+Trumpet Performance
+\end{document}
